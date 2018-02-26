@@ -11,6 +11,21 @@ Assumes default instance and localhost.
 File extraction command line 
      
     'dtutil /sourceserver localhost /SQL "'+ F.FolderPath + '\' + P.PackageName + '" /copy file;".\' + P.PackageName +'.dtsx"' AS cmd
+### batch file  
+
+Copies MSDB packages from server to server. Script must be altered to move/copy from file system.  
+
+### Must be run from origin server. 
+Uses SQL Server command line tool: dtutil 
+
+Text generated using ExtractSSISPackageInformation.sql script.  
+Use that to apply changes.
+  
+  Replace   
+
+        <username> and <password> 
+
+  In a text edited like notepad++ with your SQL login details.  
 
 Credit for original base code: 
     [https://dba.stackexchange.com/questions/68481/moving-ssis-packages-to-new-server](https://dba.stackexchange.com/questions/68481/moving-ssis-packages-to-new-server)
